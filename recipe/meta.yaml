@@ -48,8 +48,16 @@ test:
 
 about:
   home: https://www.freetype.org/
-  license: GPL-2.0 and FreeType (http://freetype.sourceforge.net/FTL.TXT)
-  summary: 'A TrueType Font Library.'
+  license: GPL-2.0 and FreeType
+  license_url: http://freetype.sourceforge.net/FTL.TXT
+  summary: A Free, High-Quality, and Portable Font Engine
+  description: |
+    FreeType is designed to be small, efficient, highly customizable
+    and portable while capable of producing high-quality output (glyph images)
+    of most vector and bitmap font formats.
+  doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
+  doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
+  dev_url: http://git.savannah.gnu.org/cgit/freetype/
 
 extra:
   recipe-maintainers:
