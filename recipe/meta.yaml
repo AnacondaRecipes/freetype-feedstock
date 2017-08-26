@@ -13,10 +13,10 @@ source:
 
 build:
   number: 0
-  skip: True  # [win and py36]
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  run_exports:
+    # remove symbols at minor versions.
+    #    https://abi-laboratory.pro/tracker/timeline/freetype/
+    - {{ pin_subpackage('freetype', max_pin='x.x') }}
 
 requirements:
   build:
@@ -25,13 +25,7 @@ requirements:
     - cmake  # [win]
   host:
     - libpng
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
     - zlib
-  run:
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
 
 test:
   commands:
