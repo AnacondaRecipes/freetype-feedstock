@@ -12,7 +12,7 @@ source:
     - winshared.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # remove symbols at minor versions.
     #    https://abi-laboratory.pro/tracker/timeline/freetype/
@@ -21,7 +21,6 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - python  # [win]
     - cmake  # [win]
   host:
     - libpng
