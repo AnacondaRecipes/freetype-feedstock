@@ -1,26 +1,29 @@
+set CXXFLAGS=
+set CFLAGS=
+
 mkdir build
 cd build
 
 :: Configure.
-cmake -G "NMake Makefiles" ^
-      -D CMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
+cmake -G "%CMAKE_GENERATOR%" ^
+      -D CMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX:/=\\%" ^
       -D CMAKE_BUILD_TYPE=Release ^
-      -D CMAKE_PREFIX_PATH="%LIBRARY_PREFIX%" ^
-      -D CMAKE_SYSTEM_PREFIX_PATH="%LIBRARY_PREFIX%" ^
+      -D CMAKE_PREFIX_PATH="%LIBRARY_PREFIX%:/=\\" ^
+      -D CMAKE_SYSTEM_PREFIX_PATH="%LIBRARY_PREFIX:/=\\%" ^
       -D BUILD_SHARED_LIBS:BOOL=true ^
-      %SRC_DIR%
+      "%SRC_DIR:/=\\%"
 if errorlevel 1 exit 1
 
 :: Build.
-nmake
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
 :: Test.
-ctest
+ctest -C Release
 if errorlevel 1 exit 1
 
 :: Install.
-nmake install
+cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 :: Move everything 1-level down.
