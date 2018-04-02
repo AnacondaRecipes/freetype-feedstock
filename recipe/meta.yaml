@@ -15,9 +15,9 @@ source:
 build:
   number: 0
   run_exports:
-    # remove symbols at minor versions.
+    # has removed symbols at minor versions, but only very rarely.  Go with major.
     #    https://abi-laboratory.pro/tracker/timeline/freetype/
-    - {{ pin_subpackage('freetype', max_pin='x') }}
+    - {{ pin_subpackage('freetype') }}
 
 requirements:
   build:
