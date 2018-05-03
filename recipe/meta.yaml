@@ -22,6 +22,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - cmake  # [win]
+    - make   # [unix]
   host:
     - libpng
     - zlib
