@@ -8,6 +8,8 @@ source:
   fn: freetype-{{ version }}.tar.bz2
   url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.bz2
   sha256: db8d87ea720ea9d5edc5388fc7a0497bb11ba9fe972245e0f7f4c7e8b1e1e84d
+  patches:
+    - 0001-Unbreak-CMake-Windows-installation.patch
 
 build:
   number: 0
@@ -27,9 +29,7 @@ requirements:
 
 test:
   commands:
-    - freetype-config --version  # [not win]
-    - conda inspect linkages -p $PREFIX freetype  # [not win]
-    - conda inspect objects -p $PREFIX freetype  # [osx]
+    - ${PREFIX}/bin/freetype-config --version  # [not win]
 
 about:
   home: https://www.freetype.org/

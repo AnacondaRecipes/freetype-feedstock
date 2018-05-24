@@ -5,12 +5,16 @@ mkdir build
 cd build
 
 :: Configure.
-cmake -G "%CMAKE_GENERATOR%" ^
-      -D CMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX:/=\\%" ^
-      -D CMAKE_BUILD_TYPE=Release ^
-      -D CMAKE_PREFIX_PATH="%LIBRARY_PREFIX%:/=\\" ^
-      -D CMAKE_SYSTEM_PREFIX_PATH="%LIBRARY_PREFIX:/=\\%" ^
-      -D BUILD_SHARED_LIBS:BOOL=true ^
+cmake -G"%CMAKE_GENERATOR%" ^
+      -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX:/=\\%" ^
+      -DCMAKE_BUILD_TYPE=Release ^
+      -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%:/=\\" ^
+      -DCMAKE_SYSTEM_PREFIX_PATH="%LIBRARY_PREFIX:/=\\%" ^
+      -DBUILD_SHARED_LIBS:BOOL=true ^
+      -DFT_WITH_BZIP2=False ^
+      -DFT_WITH_ZLIB=True ^
+      -DFT_WITH_PNG=True ^
+      -DFT_WITH_HARFBUZZ=False ^
       "%SRC_DIR:/=\\%"
 if errorlevel 1 exit 1
 
