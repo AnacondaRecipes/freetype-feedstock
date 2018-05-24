@@ -12,9 +12,11 @@ cmake -G"%CMAKE_GENERATOR%" ^
       -DCMAKE_SYSTEM_PREFIX_PATH="%LIBRARY_PREFIX:/=\\%" ^
       -DBUILD_SHARED_LIBS:BOOL=true ^
       -DFT_WITH_BZIP2=False ^
+      -DFT_WITH_HARFBUZZ=False ^
+      -DCMAKE_DISABLE_FIND_PACKAGE_BZip2=True ^
+      -DCMAKE_DISABLE_FIND_PACKAGE_HarfBuzz=True ^
       -DFT_WITH_ZLIB=True ^
       -DFT_WITH_PNG=True ^
-      -DFT_WITH_HARFBUZZ=False ^
       "%SRC_DIR:/=\\%"
 if errorlevel 1 exit 1
 
