@@ -10,9 +10,10 @@ source:
   sha256: db8d87ea720ea9d5edc5388fc7a0497bb11ba9fe972245e0f7f4c7e8b1e1e84d
   patches:
     - 0001-Unbreak-CMake-Windows-installation.patch
+    - 0002-Win-Specify-RUNTIME-destination-for-dll.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # has removed symbols at minor versions, but only very rarely.  Go with major.
     #    https://abi-laboratory.pro/tracker/timeline/freetype/
@@ -30,6 +31,7 @@ requirements:
 test:
   commands:
     - ${PREFIX}/bin/freetype-config --version  # [not win]
+    - if exist %LIBRARY_BIN%\freetype.dll (exit 0) else (exit 1)  # [win]
 
 about:
   home: https://www.freetype.org/
