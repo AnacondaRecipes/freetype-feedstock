@@ -23,6 +23,7 @@ requirements:
     - cmake  # [win]
     - make  # [not win]
     - ninja  # [win]
+    - pkg-config  # [linux and aarch64]
   host:
     - libpng
     - zlib
