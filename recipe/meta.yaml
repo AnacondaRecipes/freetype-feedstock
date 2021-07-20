@@ -7,8 +7,8 @@ package:
 source:
   url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
   sha256: a45c6b403413abd5706f3582f04c8339d26397c4304b78fa552f2215df64101f
-  patches:
-    - 0003-Install-the-pkg-config-file-on-Windows-too.patch
+  #patches:
+    #- 0003-Install-the-pkg-config-file-on-Windows-too.patch
 
 build:
   number: 0
@@ -24,6 +24,8 @@ requirements:
     - make  # [not win]
     - ninja  # [win]
     - pkg-config  # [linux and aarch64]
+    - patch  # [not win]
+    - m2-patch  # [win]
   host:
     - libpng
     - zlib
@@ -39,6 +41,7 @@ test:
 about:
   home: https://www.freetype.org/
   license: GPL-2.0-only and LicenseRef-FreeType
+  License_family: GPL AND Other
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
@@ -47,9 +50,9 @@ about:
     FreeType is designed to be small, efficient, highly customizable
     and portable while capable of producing high-quality output (glyph images)
     of most vector and bitmap font formats.
-  doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
+  doc_url: https://www.freetype.org/freetype2/docs/documentation.html
   doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
-  dev_url: http://git.savannah.gnu.org/cgit/freetype/
+  dev_url: https://gitlab.freedesktop.org/freetype/freetype
 
 extra:
   recipe-maintainers:
