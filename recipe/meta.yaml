@@ -8,6 +8,8 @@ source:
   url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
   sha256: a45c6b403413abd5706f3582f04c8339d26397c4304b78fa552f2215df64101f
   #patches:
+    # 2021/7/20: the pkg-config file was fixed,
+    # see https://gitlab.freedesktop.org/freetype/freetype/-/commit/66005cbae1ff19ab15c7ade1a3bd22665be2a9fc
     #- 0003-Install-the-pkg-config-file-on-Windows-too.patch
 
 build:
