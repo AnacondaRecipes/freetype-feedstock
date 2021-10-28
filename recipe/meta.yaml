@@ -7,8 +7,6 @@ package:
 source:
   url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
   sha256: a45c6b403413abd5706f3582f04c8339d26397c4304b78fa552f2215df64101f
-  #patches:
-  #  - 0003-Install-the-pkg-config-file-on-Windows-too.patch
 
 build:
   number: 0
@@ -24,8 +22,6 @@ requirements:
     - make  # [not win]
     - ninja  # [win]
     - pkg-config  # [linux and aarch64]
-    - patch  # [not win]
-    - m2-patch  # [win]
   host:
     - libpng
     - zlib
