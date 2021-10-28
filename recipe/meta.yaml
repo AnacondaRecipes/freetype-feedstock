@@ -24,6 +24,8 @@ requirements:
     - make  # [not win]
     - ninja  # [win]
     - pkg-config  # [linux and aarch64]
+    - patch  # [not win]
+    - m2-patch  # [win]
   host:
     - libpng
     - zlib
@@ -39,6 +41,7 @@ test:
 about:
   home: https://www.freetype.org/
   license: GPL-2.0-only and LicenseRef-FreeType
+  license_family: GPL AND Other
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
