@@ -41,7 +41,7 @@ test:
 about:
   home: https://www.freetype.org/
   license: GPL-2.0-only and LicenseRef-FreeType
-  license_family: GPL AND Other
+  license_family: GPL AND OTHER
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
@@ -52,7 +52,7 @@ about:
     of most vector and bitmap font formats.
   doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
   doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
-  dev_url: http://git.savannah.gnu.org/cgit/freetype/
+  dev_url: https://gitlab.freedesktop.org/freetype/freetype
 
 extra:
   recipe-maintainers:
