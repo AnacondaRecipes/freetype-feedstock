@@ -25,6 +25,8 @@ requirements:
   host:
     - libpng
     - zlib
+    - setuptools
+    - wheel
   run:
     - libpng
     - zlib
