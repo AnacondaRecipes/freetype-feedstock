@@ -39,6 +39,7 @@ test:
 about:
   home: https://www.freetype.org/
   license: GPL-2.0-only and LicenseRef-FreeType
+  license_family: GPL
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
@@ -47,9 +48,9 @@ about:
     FreeType is designed to be small, efficient, highly customizable
     and portable while capable of producing high-quality output (glyph images)
     of most vector and bitmap font formats.
-  doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
+  doc_url: https://freetype.sourceforge.net/freetype2/documentation.html
   doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
-  dev_url: http://git.savannah.gnu.org/cgit/freetype/
+  dev_url: https://git.savannah.gnu.org/cgit/freetype/
 
 extra:
   recipe-maintainers:
