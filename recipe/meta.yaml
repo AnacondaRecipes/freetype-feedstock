@@ -1,4 +1,4 @@
-{% set version = "2.11.0" %}
+{% set version = "2.12.1" %}
 
 package:
   name: freetype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
-  sha256: a45c6b403413abd5706f3582f04c8339d26397c4304b78fa552f2215df64101f
+  sha256: efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938
 
 build:
   number: 0
@@ -47,7 +47,7 @@ about:
     of most vector and bitmap font formats.
   doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
   doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
-  dev_url: https://gitlab.freedesktop.org/freetype/freetype
+  dev_url: http://git.savannah.gnu.org/cgit/freetype/
 
 extra:
   recipe-maintainers:
