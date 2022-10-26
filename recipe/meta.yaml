@@ -35,12 +35,13 @@ test:
     - if exist %LIBRARY_BIN%\freetype.dll (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://www.freetype.org/
-  license: GPL2
-  license_family: GPL2
+  home: https://freetype.org/
+  license: GPL-2-only and LicenseRef-FreeType
+  license_family: Other
   license_file:
     - docs/GPLv2.TXT
-  license_url: https://gitlab.freedesktop.org/freetype/freetype
+    - docs/FTL.TXT
+  license_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/LICENSE.TXT
   summary: A Free, High-Quality, and Portable Font Engine
   description: |
     FreeType is designed to be small, efficient, highly customizable
