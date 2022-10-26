@@ -1,12 +1,12 @@
-{% set version = "2.11.0" %}
+{% set version = "2.12.1" %}
 
 package:
   name: freetype
   version: {{ version }}
 
 source:
-  url: http://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
-  sha256: a45c6b403413abd5706f3582f04c8339d26397c4304b78fa552f2215df64101f
+  url: https://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
+  sha256: efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938
 
 build:
   number: 0
@@ -35,18 +35,20 @@ test:
     - if exist %LIBRARY_BIN%\freetype.dll (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://www.freetype.org/
-  license: GPL-2.0-only and LicenseRef-FreeType
+  home: https://freetype.org/
+  license: GPL-2-only and LicenseRef-FreeType
+  license_family: Other
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
+  license_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/LICENSE.TXT
   summary: A Free, High-Quality, and Portable Font Engine
   description: |
     FreeType is designed to be small, efficient, highly customizable
     and portable while capable of producing high-quality output (glyph images)
     of most vector and bitmap font formats.
-  doc_url: http://freetype.sourceforge.net/freetype2/documentation.html
-  doc_source_url: https://sourceforge.net/projects/freetype/?source=navbar
+  doc_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/README
+  doc_source_url: https://gitlab.freedesktop.org/freetype/freetype
   dev_url: https://gitlab.freedesktop.org/freetype/freetype
 
 extra:
