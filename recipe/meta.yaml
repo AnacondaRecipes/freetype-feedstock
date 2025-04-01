@@ -1,4 +1,4 @@
-{% set version = "2.12.1" %}
+{% set version = "2.13.3" %}
 
 package:
   name: freetype
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
-  sha256: efe71fd4b8246f1b0b1b9bfca13cfff1c9ad85930340c27df469733bbb620938
+  sha256: 5c3a8e78f7b24c20b25b54ee575d6daa40007a5f4eea2845861c3409b3021747
 
 build:
   number: 0
