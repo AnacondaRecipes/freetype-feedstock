@@ -42,14 +42,12 @@ about:
   license_file:
     - docs/GPLv2.TXT
     - docs/FTL.TXT
-  license_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/LICENSE.TXT
   summary: A Free, High-Quality, and Portable Font Engine
   description: |
     FreeType is designed to be small, efficient, highly customizable
     and portable while capable of producing high-quality output (glyph images)
     of most vector and bitmap font formats.
   doc_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/README
-  doc_source_url: https://gitlab.freedesktop.org/freetype/freetype
   dev_url: https://gitlab.freedesktop.org/freetype/freetype
 
 extra:
