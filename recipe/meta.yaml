@@ -39,7 +39,9 @@ about:
   home: https://freetype.org/
   license: GPL-2.0-only
   license_family: Other
-  license_file: LICENSE
+  license_file:
+    - docs/GPLv2.TXT
+    - docs/FTL.TXT
   license_url: https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/LICENSE.TXT
   summary: A Free, High-Quality, and Portable Font Engine
   description: |
