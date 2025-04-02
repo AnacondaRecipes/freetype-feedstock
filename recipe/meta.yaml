@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://download.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
+  url: https://download-mirror.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
   sha256: 5c3a8e78f7b24c20b25b54ee575d6daa40007a5f4eea2845861c3409b3021747
 
 build:
