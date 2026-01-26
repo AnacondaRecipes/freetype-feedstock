@@ -1,12 +1,13 @@
-{% set version = "2.13.3" %}
+{% set name = "freetype" %}
+{% set version = "2.14.1" %}
 
 package:
-  name: freetype
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://download-mirror.savannah.gnu.org/releases/freetype/freetype-{{ version }}.tar.gz
-  sha256: 5c3a8e78f7b24c20b25b54ee575d6daa40007a5f4eea2845861c3409b3021747
+  url: https://download-mirror.savannah.gnu.org/releases/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 174d9e53402e1bf9ec7277e22ec199ba3e55a6be2c0740cb18c0ee9850fc8c34
 
 build:
   number: 0
@@ -17,6 +18,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - cmake  # [win]
     - make  # [not win]
@@ -24,11 +26,8 @@ requirements:
     - pkg-config           # [unix]
     - libtool              # [unix]
   host:
-    - libpng
-    - zlib
-  run:
-    - libpng
-    - zlib
+    - libpng {{ libpng }}
+    - zlib {{ zlib }}
 
 test:
   commands:
@@ -36,7 +35,7 @@ test:
     - if exist %LIBRARY_BIN%\freetype.dll (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://freetype.org/
+  home: https://freetype.org
   license: GPL-2.0-only or FTL
   license_family: Other
   license_file:
